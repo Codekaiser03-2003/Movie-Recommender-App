@@ -44,3 +44,17 @@ A movie recommender system built using Python, Streamlit, and machine learning a
     ```bash
     streamlit run app.py
 
+## Deployment
+
+The app is deployed on Streamlit Cloud. You can access it using the following link:
+
+[Movie Recommender System on Streamlit Cloud]([https://your-app-link.streamlit.app](https://movie-recommender-app-3ovjwirqkfahgbhjhibukk.streamlit.app/))
+
+## Files
+
+- **app.py**: Main Streamlit app file that contains the core logic for the movie recommendation system.
+- **movie_dict.pkl**: Pickled movie dataset containing information such as titles, genres, movie IDs, etc.
+- **similarity1.pkl**, **similarity2.pkl**: Pickled parts of the movie similarity matrix used to calculate movie recommendations.
+- **requirements.txt**: Python dependencies needed to run the app. Install them using `pip install -r requirements.txt`.
+- **secrets.toml**: Streamlit secrets for securely managing sensitive information like API keys.
+
