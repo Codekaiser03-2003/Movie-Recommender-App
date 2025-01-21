@@ -4,8 +4,11 @@ import pandas as pd
 import requests
 import numpy as np
 
+# Fetch the TMDb API key securely from Streamlit secrets
+api_key = st.secrets["api_keys"]["tmdb_api_key"]
+
 def fetch_poster(movie_id):
-    url = f'https://api.themoviedb.org/3/movie/{movie_id}?api_key=39eea467429598301cc1e1c82fbc0987'
+    url = f'https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}'
     response = requests.get(url)
     data = response.json()
     return 'http://image.tmdb.org/t/p/w500/' + data['poster_path']
