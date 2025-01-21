@@ -37,8 +37,10 @@ A movie recommender system built using Python, Streamlit, and machine learning a
    git clone https://github.com/yourusername/movie-recommender.git
    cd movie-recommender
 2. Install the required dependencies:
-   pip install -r requirements.txt
+    ```bash
+    pip install -r requirements.txt
 
 3. Run the Streamlit app locally:
-   streamlit run app.py
+    ```bash
+    streamlit run app.py
 
