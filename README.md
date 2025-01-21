@@ -48,7 +48,7 @@ A movie recommender system built using Python, Streamlit, and machine learning a
 
 The app is deployed on Streamlit Cloud. You can access it using the following link:
 
-[Movie Recommender System on Streamlit Cloud]([https://your-app-link.streamlit.app](https://movie-recommender-app-3ovjwirqkfahgbhjhibukk.streamlit.app/))
+[Movie Recommender System on Streamlit Cloud]([https://movie-recommender-app-3ovjwirqkfahgbhjhibukk.streamlit.app/])
 
 ## Files
 
