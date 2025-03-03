@@ -4,15 +4,14 @@ import pandas as pd
 import requests
 import numpy as np
 
-# Fetch the TMDb API key securely from Streamlit secrets
-api_key = st.secrets["api_keys"]["tmdb_api_key"]
+# Directly assign the API key (Not recommended for production)
+api_key = "39eea467429598301cc1e1c82fbc0987"
 
 def fetch_poster(movie_id):
     url = f'https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}'
     response = requests.get(url)
     data = response.json()
-    return 'http://image.tmdb.org/t/p/w500/' + data['poster_path']
-
+    return 'http://image.tmdb.org/t/p/w500/' + data.get('poster_path', '')
 
 movies_list = pickle.load(open('movie_dict.pkl','rb'))
 movies = pd.DataFrame(movies_list)
@@ -41,7 +40,6 @@ def recommend(movie):
 
     return recommended_movie_names, recommended_movie_posters
 
-
 if st.button('Show Recommendation'):
     recommended_movie_names, posters = recommend(selected_movie)
     for name, poster in zip(recommended_movie_names, posters):
@@ -50,4 +48,3 @@ if st.button('Show Recommendation'):
             st.image(poster, width=150)
         with col2:
             st.write(name)
-
